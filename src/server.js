@@ -1,17 +1,15 @@
-//const express = require('express')
 import express from 'express';
-//import path from 'path';
-//import configViewEngine from './configs/viewEngine';
+import configViewEngine from './configs/viewEngine.js';
+import * as dotenv from 'dotenv'
+dotenv.config();
 
 const app = express();
-const port = 3000;
-//const __dirname = path.resolve(path.dirname(''));
+const port = process.env.PORT;
 
-//configViewEngine(app);
+configViewEngine(app);
 
 app.get('/', (req, res) => {
-    //res.sendFile('/src/views/index.html', { root: __dirname })
-
+    res.render('index.ejs');
 })
 
 app.listen(port, () => {
