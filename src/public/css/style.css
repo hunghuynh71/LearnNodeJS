@@ -1,9 +1,4 @@
 h1 {
     color: red;
-    border: 1px solid green;
-}
-
-img {
-    width: 50%;
-    height: auto;
+    font-weight: bold !important;
 }
